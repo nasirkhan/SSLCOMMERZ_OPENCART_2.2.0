@@ -69,7 +69,7 @@ class ControllerPaymentSSLCommerce extends Controller {
 				$data['process_url'] = 'https://securepay.sslcommerz.com/gwprocess/v3/process.php';
 			}
 		else {
-				$data['process_url'] = 'https://securepay.sslcommerz.com/gwprocess/testbox/v3/process.php';
+				$data['process_url'] = 'https://sandbox.sslcommerz.com/gwprocess/v3/process.php';
 			}
 
 
@@ -119,7 +119,7 @@ if(empty($val_id)){
 						  $valid_url_own = ("https://securepay.sslcommerz.com/validator/api/merchantTransIDvalidationAPI.php?tran_id=".$order_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json"); 
 						 
 						  } else{
-							 $valid_url_own = ("https://securepay.sslcommerz.com/validator/api/testbox/merchantTransIDvalidationAPI.php?tran_id=".$order_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json");  
+							 $valid_url_own = ("https://sandbox.sslcommerz.com/validator/api/merchantTransIDvalidationAPI.php?tran_id=".$order_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json");  
 						  }
 						 
 			$ownvalid = curl_init();
@@ -150,7 +150,7 @@ if(empty($val_id)){
                 if($this->config->get('SSLCommerce_test')=='live') {
                 $requested_url = ("https://securepay.sslcommerz.com/validator/api/validationserverAPI.php?val_id=".$val_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json");
                 } else{
-               $requested_url = ("https://securepay.sslcommerz.com/validator/api/testbox/validationserverAPI.php?val_id=".$val_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json");  
+               $requested_url = ("https://sandbox.sslcommerz.com/validator/api/validationserverAPI.php?val_id=".$val_id."&Store_Id=".$store_id."&Store_Passwd=".$store_passwd."&v=1&format=json");  
                 }  
 				
                 $amount = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false);
