@@ -3,7 +3,7 @@ SSLCOMMERZ-Online Payment Gateway For Bangladesh
 
 The module for receiving Payments from Bangladesh through SSLCommerz.com for opencart V2.2.0 (Guids)
 
-First Download the File form OpenCart Extenstion SSLCOMMERZ_OPENCART_2.2.0
+* First Download the File form OpenCart Extenstion SSLCOMMERZ_OPENCART_2.2.0 (http://www.opencart.com/index.php?route=extension/extension/info&token=8a9da785e88064e4967b783e11005bef&extension_id=26629)
 
 Unzip Downloaded File Named SSLCOMMERZ_OPENCART_2.2.0.zip in a Folder.
 
